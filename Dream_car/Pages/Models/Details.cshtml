@@ -1,0 +1,43 @@
+﻿@page
+@model Dream_car.Pages.Models.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Model</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Model.Model_Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Model.Model_Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Model.Model_Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Model.Model_Year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Model.Company_Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Model.Company_Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Model.Dealer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Model.Dealer.Dealer_Address)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Model.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
