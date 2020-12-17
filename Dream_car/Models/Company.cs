@@ -8,13 +8,13 @@ namespace Dream_car.Models
 {
     public class Company
     {
-        public int Id { get; set; }
-        [Required]
-        public string Company_Name { get; set; }
-        [Required]
-        public string Company_Website { get; set; }
-        public string Company_Phone { get; set; }
-        public string Company_Email { get; set; }
-        public string Company_Headquater { get; set; }
+        public int Id { get; set; }// primary key in int datatype
+        [Required]//cannot be null
+        public string Company_Name { get; set; }//value add in string type data
+        [Required]//cannot be null
+        public string Company_Website { get; set; }//value add in string type data
+        public string Company_Phone { get; set; }//value add in string type data
+        public string Company_Email { get; set; }//value add in string type data
+        public string Company_Headquater { get; set; }//value add in string type data
     }
 }

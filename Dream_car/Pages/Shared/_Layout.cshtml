@@ -1,6 +1,34 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .all-browsers {
+            margin: 0;
+            padding: 5px;
+            background-color: lightgray;
+        }
+
+            .all-browsers > h1, .browser {
+                margin: 10px;
+                padding: 5px;
+            }
+
+        .browser {
+            background: white;
+        }
+
+            .browser > h2, p {
+                margin: 4px;
+                font-size: 90%;
+            }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: white;
+        }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Dream Car</title>
@@ -11,7 +39,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Dream_car</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Dream cars</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -40,13 +68,14 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - Dream_car - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2020 - Dream_car - <a asp-area="" asp-page="/Privacy"></a>
         </div>
     </footer>
 
