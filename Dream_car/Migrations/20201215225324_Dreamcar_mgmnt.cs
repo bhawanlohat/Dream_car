@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System.IO;
+using static System.Net.WebRequestMethods;
 
 namespace Dream_car.Migrations
 {
@@ -117,6 +119,9 @@ namespace Dream_car.Migrations
                 name: "IX_Specification_ModelId",
                 table: "Specification",
                 column: "ModelId");
+            var sqlFile = Path.Combine(".\\DatabaseScript", @"db.sql");
+
+            migrationBuilder.Sql(System.IO.File.ReadAllText(sqlFile));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
